@@ -3,7 +3,7 @@ import boto3
 from botocore.exceptions import NoCredentialsError
 import os
 
-S3_BUCKET = "kylerfileupload"
+S3_BUCKET = 
 
 s3 = boto3.client('s3')
 
