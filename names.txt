@@ -1,5 +1,11 @@
 People who worked on this assignment:
 Kyler Kunz
 Hunter Lovell
+<<<<<<< HEAD
 Joshua Varley
 Riley Dufour
+=======
+Clay willden
+Josh Varley
+Riley DuFour
+>>>>>>> d8be649d14646fa3dac204bddc062c8a74424a1d
