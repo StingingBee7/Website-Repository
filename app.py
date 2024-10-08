@@ -13,6 +13,16 @@ app = Flask(__name__)
 def upload_form():
     return render_template('index.html')
 
+# hunter's contribution :)
+a, b = 0, 1
+
+@app.route("/fibonacci")
+def fibonacci_iteration():
+    global a, b
+    current_fib = a
+    a, b = b, a + b
+    return f"<h1>Current Fibonacci Number: {current_fib}</h1>"
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
