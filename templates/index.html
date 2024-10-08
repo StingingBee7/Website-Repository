@@ -1,14 +1,24 @@
-<!doctype html>
-<title>Upload a File</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Upload a File</title>
+</head>
+<body>
+	<h1>Upload a File to S3</h1>
 
-<h1>Upload a File to S3<h1>
+	<form method="post" action="/upload" enctype="multipart/form-data">
+		<input type="file" name="file">
+		<input type="submit" value="Upload">
+	</form>
 
-<form method="post" action="/upload" enctype="multipart/form-data">
-
-	<input type="file" name="file">
-
-	<input type="submit" value="upload">
-
-</form>
-
-<a href="/resume">Go to Resume</a>
+	{% if files %}
+		<ul>
+			{% for item in files %}
+				<li><a href="{{ item }}">{{ item }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</body>
+</html>
