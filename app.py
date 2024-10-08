@@ -3,7 +3,7 @@ import boto3
 from botocore.exceptions import NoCredentialsError
 import os
 
-S3_BUCKET = 
+S3_BUCKET = 'kylerfileupload' 
 
 s3 = boto3.client('s3')
 
@@ -40,3 +40,7 @@ def upload_file():
 @app.route('/success')
 def upload_success():
     return 'File successfully uploaded to S3!'
+
+@app.route('/resume')
+def resume():
+    return render_template('ClayResume.html')
